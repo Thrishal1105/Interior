@@ -1,0 +1,28 @@
+/* src/pages/Services.css */
+
+.services-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.services-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-item {
+  flex: 1 1 calc(45% - 20px);
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.service-item img {
+  max-width: 100px; /* Adjust size as needed */
+  height: auto;
+}

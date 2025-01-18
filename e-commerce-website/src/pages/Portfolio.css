@@ -1,0 +1,32 @@
+/* src/pages/Portfolio.css */
+
+.portfolio-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project-item {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+}
+
+.before-image,
+.after-image {
+  width: 45%; /* Adjust the size as needed */
+  height: auto;
+}
