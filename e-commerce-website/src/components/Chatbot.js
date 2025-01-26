@@ -1,51 +1,95 @@
 // src/components/Chatbot.js
 import React, { useState } from 'react';
 import Chatbot from 'react-simple-chatbot';
-import './Chatbot.css'; // Import your CSS file
+import './Chatbot.css'; // Import the updated CSS
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import robotIcon from '../assets/icons/robot-icon.png'; // Ensure this path is correct
 
 const ChatBotComponent = () => {
+  const navigate = useNavigate(); // Initialize useNavigate
   const [isOpen, setIsOpen] = useState(false);
-
+  
   const toggleChatbot = () => {
     setIsOpen(!isOpen);
+  };
+
+  const handleBookingConsultation = () => {
+    navigate('/booking'); // Navigate to the Booking page
+  };
+
+  const handleRedirect = (path) => {
+    navigate(path); // Navigate to the specified path
   };
 
   return (
     <div className="chatbot-container">
       <button className="chatbot-toggle" onClick={toggleChatbot}>
-        <img src={robotIcon} alt="Chatbot" className="chatbot-icon" />
+        <img src={robotIcon} alt="Chatbot Icon" className="chatbot-icon" />
       </button>
       {isOpen && (
         <div className="chatbot-window">
           <Chatbot
+            headerTitle="Chat with us!"
+            botAvatar={robotIcon}
+            userAvatar={robotIcon}
             steps={[
               {
                 id: '1',
-                message: 'Welcome to our interior design service! How can I help you today?',
+                message: 'Hello! How can I assist you today?',
                 trigger: '2',
               },
               {
                 id: '2',
                 options: [
-                  { value: 'book', label: 'I want to book a consultation', trigger: '3' },
-                  { value: 'services', label: 'Tell me about your services', trigger: '4' },
-                  { value: 'exit', label: 'Exit', trigger: '5' },
+                  { value: 'book-consultation', label: 'I want to book a consultation', trigger: '3' },
+                  { value: 'services', label: 'Tell me about your services', trigger: 'services' },
+                  { value: 'portfolio', label: 'Show me your portfolio', trigger: 'portfolio' },
+                  { value: 'general-query', label: 'I have a general query', trigger: '4' },
                 ],
               },
               {
                 id: '3',
-                message: 'Great! Please visit our booking page.',
+                message: 'Great! Let’s get you booked for a consultation.',
+                trigger: '5',
+              },
+              {
+                id: '5',
+                component: (
+                  <div>
+                    <p>Click below to book your consultation:</p>
+                    <button onClick={handleBookingConsultation}>Book Consultation</button>
+                  </div>
+                ),
+                end: true,
+              },
+              {
+                id: 'services',
+                message: 'We offer a variety of interior design services tailored to your needs.',
+                trigger: 'end',
+              },
+              {
+                id: 'portfolio',
+                message: 'Here is a link to our portfolio:',
+                trigger: 'portfolioLink',
+              },
+              {
+                id: 'portfolioLink',
+                component: (
+                  <div>
+                    <p>Click below to view our portfolio:</p>
+                    <button onClick={() => handleRedirect('/portfolio')}>View Portfolio</button>
+                  </div>
+                ),
                 end: true,
               },
               {
                 id: '4',
-                message: 'We offer a variety of interior design services tailored to your needs.',
-                trigger: '2',
+                message: 'Please describe your query, and I will assist you.',
+                trigger: 'end',
               },
               {
-                id: '5',
-                message: 'Thank you for visiting! Have a great day!',
+                id: 'end',
+                message: 'Thank you for reaching out!',
                 end: true,
               },
             ]}

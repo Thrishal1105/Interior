@@ -1,5 +1,12 @@
 // src/pages/Services.js
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+  faRulerCombined, // Space Planning
+  faHammer,       // Renovation
+  faCube,         // 3D Rendering
+  faCouch,        // Furniture Selection
+} from '@fortawesome/free-solid-svg-icons';
 import './Services.css'; // Import styles for the services page
 
 const Services = () => {
@@ -8,25 +15,25 @@ const Services = () => {
       id: 1,
       title: 'Space Planning',
       description: 'Expert layout planning to maximize functionality and flow.',
-      icon: 'path/to/space-planning-icon.png', // Replace with actual icon path
+      icon: faRulerCombined,
     },
     {
       id: 2,
       title: 'Renovation',
       description: 'Transforming spaces through thoughtful renovation and design.',
-      icon: 'path/to/renovation-icon.png', // Replace with actual icon path
+      icon: faHammer,
     },
     {
       id: 3,
       title: '3D Rendering',
       description: 'High-quality 3D visualizations to bring your ideas to life.',
-      icon: 'path/to/3d-rendering-icon.png', // Replace with actual icon path
+      icon: faCube,
     },
     {
       id: 4,
       title: 'Furniture Selection',
       description: 'Curated selections of furniture to fit your style and needs.',
-      icon: 'path/to/furniture-selection-icon.png', // Replace with actual icon path
+      icon: faCouch,
     },
   ];
 
@@ -36,7 +43,9 @@ const Services = () => {
       <div className="services-list">
         {services.map(service => (
           <div key={service.id} className="service-item">
-            <img src={service.icon} alt={service.title} />
+            <div className="service-icon">
+              <FontAwesomeIcon icon={service.icon} size="3x" />
+            </div>
             <h2>{service.title}</h2>
             <p>{service.description}</p>
           </div>

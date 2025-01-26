@@ -1,0 +1,107 @@
+/* src/components/TestimonialCarousel.css */
+
+/* Testimonial Section */
+.testimonial-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.testimonial-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 40px;
+}
+
+.testimonial-section h2 span {
+  font-size: 3rem;
+  color: #ddb347;
+}
+
+/* Testimonial Carousel */
+.testimonial-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-carousel {
+  display: flex;
+  gap: 20px;
+  animation: scroll 15s linear infinite;
+}
+
+/* Smooth Scrolling Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Testimonial Card */
+.testimonial-card {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  flex-shrink: 0;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-card:not(:first-child) {
+  margin-left: -20px;
+}
+
+/* Testimonial Image */
+.testimonial-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid #b29dd9;
+}
+
+.testimonial-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Testimonial Text */
+.testimonial-text {
+  font-size: 1rem;
+  color: #555;
+  font-style: italic;
+  margin: 15px 0;
+  position: relative;
+  padding: 0 10px;
+}
+
+.testimonial-text:before,
+.testimonial-text:after {
+  content: '"';
+  font-size: 2rem;
+  color: #b29dd9;
+}
+
+/* Customer Name */
+.customer-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #4b4b4b;
+  margin-top: 10px;
+}

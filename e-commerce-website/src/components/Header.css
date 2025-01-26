@@ -1,92 +1,165 @@
 /* src/components/Header.css */
 
-header {
+/* General Header Styles */
+.header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0.25rem 0.5rem 1.5rem; /* Adjust padding as needed */
-  color: white; /* Text color */
-  font-weight: bold; /* Make text bold */
-  position: absolute; /* Position it absolutely to overlay on the video */
-  width: 100%; /* Full width */
-  z-index: 2; /* Ensure it is above the video */
+  justify-content: space-between;
+  padding: 20px 40px; /* Increased horizontal padding */
   background-color: transparent;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1000; /* Ensure header is above other content */
+  transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Add a background color when scrolling (optional, requires JS) */
+.header.scrolled {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Logo Container */
+.logo-container {
+  flex: 0 0 auto;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #f0c14b; /* Logo color */
-  transition: color 0.3s;
+  width: 70px; /* Slightly larger logo */
+  height: auto;
+  transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-.logo img {
-  height: 100px; /* Adjust height as needed */
-  width: auto;
+.logo:hover {
+  transform: scale(1.05); /* Slightly enlarge logo on hover */
 }
 
-
-
-
-nav {
-  padding: 0.5rem;
+/* Navigation Styles */
+.nav {
+  flex: 1;
 }
 
-.nav-links {
+.nav ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  justify-content: flex-end;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  top: -5px; /* Move up the navigation */
 }
 
-.nav-links li {
-  position: relative; /* Needed for the dropdown */
+.nav li {
+  margin-left: 30px; /* Increased spacing between nav items */
+  position: relative;
 }
 
-.nav-links a {
-  color: white;
+.nav a {
   text-decoration: none;
-  padding: 10px 15px; /* Add padding for clickable area */
+  color: #fff; /* White text for contrast */
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 8px 12px; /* Padding for better click area */
   border-radius: 5px; /* Rounded corners */
-  transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
-.nav-links a:hover {
-  background-color: rgba(240, 194, 75, 0.2); /* Light background on hover */
-  color: #f0c14b; /* Change text color on hover */
+.nav a:hover {
+  color: #ddb347; /* Gold color on hover */
+  background-color: rgba(255, 255, 255, 0.296); /* Subtle background on hover */
+  transform: translateY(-2px); /* Slight lift effect */
 }
 
-.mega-menu {
-  display: none; /* Hide mega menu by default */
+/* Active Link Style (optional, requires JS) */
+.nav a.active {
+  color: #ddb347;
+  font-weight: 600;
+}
+
+/* Dropdown Menu Styles (if needed) */
+.nav li.services-dropdown {
+  position: relative;
+}
+
+.nav li.services-dropdown .mega-menu {
+  display: none;
   position: absolute;
-  top: 100%; /* Position below the nav item */
+  top: 100%;
   left: 0;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   z-index: 1000;
-  border-radius: 5px; /* Rounded corners for mega menu */
+  min-width: 200px;
 }
 
-.services-dropdown:hover .mega-menu {
-  display: flex; /* Show mega menu on hover */
-  flex-direction: row; /* Arrange columns side by side */
+.nav li.services-dropdown:hover .mega-menu {
+  display: block;
 }
 
-.menu-column {
-  margin-right: 20px; /* Space between columns */
+.mega-menu .menu-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.menu-column h3 {
-  margin-bottom: 10px; /* Space below headings */
-  color: #282c34; /* Dark color for headings */
+.mega-menu .menu-column p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
 }
 
-.menu-column p {
-  margin: 5px 0; /* Space between items */
-  color: #555; /* Gray color for text */
-  transition: color 0.3s;
+.mega-menu .menu-column p:hover {
+  color: #ddb347;
 }
 
-.menu-column p:hover {
-  color: #f0c14b; /* Change color on hover */
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px; /* Reduced padding for smaller screens */
+  }
+
+  .logo {
+    width: 100px; /* Smaller logo for mobile */
+  }
+
+  .nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    align-items: flex-end;
+    background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    position: absolute;
+    top: 70px; /* Adjust based on header height */
+    right: 20px;
+    display: none; /* Hide by default */
+  }
+
+  .nav ul.active {
+    display: flex; /* Show when toggled */
+  }
+
+  .nav li {
+    margin-left: 0;
+    margin-bottom: 10px; /* Space between stacked items */
+  }
+
+  .nav a {
+    color: #333; /* Dark text for better readability */
+  }
+
+  .nav a:hover {
+    background-color: rgba(221, 179, 71, 0.1); /* Light gold background */
+  }
+
+  /* Hide mega menu on mobile */
+  .nav li.services-dropdown .mega-menu {
+    display: none !important;
+  }
 }

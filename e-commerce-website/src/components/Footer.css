@@ -1,37 +1,75 @@
 /* src/components/Footer.css */
 
-footer {
-  background-color: #282c34;
-  color: white;
-  padding: 5px;
-  text-align: center;
+.footer {
+  background-color: #282c34; /* Dark background for footer */
+  color: #ffffff; /* White text color */
+  padding: 40px 20px; /* Padding around the footer */
+  text-align: center; /* Center align text */
 }
 
 .footer-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.footer-content p{
-     color: #fff;
+  max-width: 1200px; /* Max width for content */
+  margin: 0 auto; /* Center the content */
 }
 
 .footer-links {
-  list-style: none;
-  padding: 0;
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Space out columns */
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  margin-bottom: 20px; /* Space below links */
 }
 
-.footer-links li {
-  display: inline;
-  margin: 0 15px;
+.footer-column {
+  flex: 1; /* Each column takes equal space */
+  min-width: 200px; /* Minimum width for each column */
+  margin: 10px; /* Margin around columns */
 }
 
-.footer-links a {
-  color: white;
-  text-decoration: none;
-  transition: color 0.3s;
+.footer-column h3 {
+  font-size: 1.5em; /* Larger font for headings */
+  margin-bottom: 10px; /* Space below headings */
 }
 
-.footer-links a:hover {
-  color: #f0c14b; /* Change color on hover */
+.footer-column ul {
+  list-style-type: none; /* Remove bullet points */
+  padding: 0; /* Remove padding */
+}
+
+.footer-column li {
+  margin: 5px 0; /* Space between list items */
+}
+
+.footer-column a {
+  color: #ffffff; /* White text for links */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s; /* Smooth transition for hover */
+}
+
+.footer-column a:hover {
+  color: #ddb347; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+  
+}
+
+.social-media {
+  display: flex; /* Flexbox for social media icons */
+  justify-content: center; /* Center align icons */
+  padding: 0; /* Remove padding */
+}
+
+.social-media li {
+  margin: 0 10px; /* Space between icons */
+  font-size: 1.5em; /* Increase size of icons */
+}
+
+.social-media li:hover {
+  color: #ddb347; /* Change color on hover */
+  cursor: pointer;
+  transform: scale(1.3); /* Scale up on hover */
+}
+
+.footer-copy {
+  margin-top: 20px; /* Space above copyright text */
+  font-size: 0.9em; /* Smaller font size */
+  color: #cccccc; /* Light grey for copyright text */
 }

@@ -9,6 +9,11 @@ import Portfolio from './pages/Portfolio';
 import Booking from './pages/Booking';
 import Quiz from './components/Quiz'; // Import the Quiz component
 import ChatBotComponent from './components/Chatbot'; // Import the Chatbot component
+import Blog from './pages/Blog';
+import TimelineSection from './components/TimelinesSection';
+import Login from './pages/Login';
+import SignUp from './pages/SignUp';
+
 
 const App = () => {
   return (
@@ -21,6 +26,10 @@ const App = () => {
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/quiz" element={<Quiz />} /> {/* Add route for Quiz */}
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/timeline" element={<TimelineSection />} />
+        <Route path="/signup" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <ChatBotComponent /> {/* Include the Chatbot component */}
     </Router>
