@@ -1,5 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import './TimelineSection.css';
 import {
   faUsers,       // For "Talk to our Interior Designer"

@@ -1,5 +1,5 @@
 /* Portfolio.css */
-
+@import '../styles.css';
 /* General styles */
 .portfolio-container {
   max-width: 1200px;

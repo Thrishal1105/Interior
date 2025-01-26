@@ -1,3 +1,6 @@
+
+@import '../styles.css';
+
 /* Chatbot Container */
 .chatbot-container {
   position: fixed;

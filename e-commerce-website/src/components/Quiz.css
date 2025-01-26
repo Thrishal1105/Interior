@@ -1,5 +1,5 @@
 /* src/components/Quiz.css */
-
+@import '../styles.css';
 .quiz-container {
   max-width: 600px; /* Limit the width of the quiz container */
   margin: 0 auto; /* Center the container */

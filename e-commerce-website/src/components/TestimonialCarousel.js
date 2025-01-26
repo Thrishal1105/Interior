@@ -2,6 +2,7 @@
 import React from 'react';
 import './TestimonialCarousel.css'; // Import the CSS for this component
 
+
 const testimonials = [
   {
     name: "John Doe",

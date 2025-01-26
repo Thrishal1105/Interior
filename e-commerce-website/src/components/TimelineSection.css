@@ -1,5 +1,5 @@
 /* Timeline.css */
-
+@import '../styles.css';
 /* General styles */
 .timeline-section {
     text-align: center;

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import './Quiz.css'; // Import your styles
 
+
 const Quiz = () => {
   const [style, setStyle] = useState('');
   const [submitted, setSubmitted] = useState(false);

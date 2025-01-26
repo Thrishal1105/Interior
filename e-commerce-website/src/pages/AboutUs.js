@@ -1,13 +1,14 @@
 // src/pages/AboutUs.js
 import React from 'react';
 import './AboutUs.css'; // Import the CSS for styling
+import '../styles.css';
 
 const AboutUs = () => {
   return (
     <div className="about-container">
       <h1 className="about-title">About Us</h1>
       <p className="about-description">
-        At [Your Company Name], we believe in transforming spaces into beautiful, functional environments that reflect our clients' unique styles and needs. Our team of experienced designers is dedicated to providing exceptional service and innovative design solutions. With a focus on quality, creativity, and attention to detail, we strive to create spaces that are both aesthetically pleasing and functional.
+        At Interior Design , we believe in transforming spaces into beautiful, functional environments that reflect our clients' unique styles and needs. Our team of experienced designers is dedicated to providing exceptional service and innovative design solutions. With a focus on quality, creativity, and attention to detail.
       </p>
       <p className="about-description">
         From concept to completion, we work closely with our clients to understand their needs and preferences. We pride ourselves on our ability to listen, communicate effectively, and provide personalized service to each and every client. Whether you're looking to renovate a single room or an entire home, our team of designers is here to guide you every step of the way.

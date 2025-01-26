@@ -1,6 +1,7 @@
 // src/pages/Portfolio.js
 import React from 'react';
 import './Portfolio.css'; // Import styles for the portfolio page
+import '../styles.css';
 
 const Portfolio = () => {
   const projects = [

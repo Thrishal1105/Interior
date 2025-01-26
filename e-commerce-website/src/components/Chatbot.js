@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import Chatbot from 'react-simple-chatbot';
 import './Chatbot.css'; // Import the updated CSS
+
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import robotIcon from '../assets/icons/robot-icon.png'; // Ensure this path is correct
 

@@ -1,5 +1,5 @@
 /* Contact.css */
-
+@import '../styles.css';
 /* General styles */
 .contact-container {
   max-width: 1200px;

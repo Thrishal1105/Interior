@@ -1,5 +1,6 @@
 // src/components/BlogCarousel.js
 import React from "react";
+
 import "./BlogCarousel.css"; // Import the CSS for this component
 
 const blogs = [

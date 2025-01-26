@@ -1,6 +1,7 @@
 // src/pages/Contact.js
 import React from 'react';
 import './Contact.css'; // Import styles for the contact page
+import '../styles.css';
 
 const Contact = () => {
   return (

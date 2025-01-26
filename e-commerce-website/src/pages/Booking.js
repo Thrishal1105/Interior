@@ -1,5 +1,6 @@
 import React from 'react';
 import './Booking.css'; // Import styles for the booking page
+import '../styles.css';
 
 const Booking = () => {
   return (

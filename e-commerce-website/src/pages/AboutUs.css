@@ -1,5 +1,6 @@
 /* src/pages/AboutUs.css */
 
+@import '../styles.css';
 .about-container {
   padding: 40px 20px;
   background-color: #f9f9f9; /* Light background */

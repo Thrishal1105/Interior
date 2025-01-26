@@ -1,165 +1,165 @@
 /* src/components/Header.css */
-
+@import '../styles.css';
 /* General Header Styles */
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 40px; /* Increased horizontal padding */
-  background-color: transparent;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 1000; /* Ensure header is above other content */
-  transition: background-color 0.3s ease; /* Smooth background transition */
-}
-
-/* Add a background color when scrolling (optional, requires JS) */
-.header.scrolled {
-  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
-
-/* Logo Container */
-.logo-container {
-  flex: 0 0 auto;
-}
-
-.logo {
-  width: 70px; /* Slightly larger logo */
-  height: auto;
-  transition: transform 0.3s ease; /* Smooth hover effect */
-}
-
-.logo:hover {
-  transform: scale(1.05); /* Slightly enlarge logo on hover */
-}
-
-/* Navigation Styles */
-.nav {
-  flex: 1;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  top: -5px; /* Move up the navigation */
-}
-
-.nav li {
-  margin-left: 30px; /* Increased spacing between nav items */
-  position: relative;
-}
-
-.nav a {
-  text-decoration: none;
-  color: #fff; /* White text for contrast */
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-  padding: 8px 12px; /* Padding for better click area */
-  border-radius: 5px; /* Rounded corners */
-}
-
-.nav a:hover {
-  color: #ddb347; /* Gold color on hover */
-  background-color: rgba(255, 255, 255, 0.296); /* Subtle background on hover */
-  transform: translateY(-2px); /* Slight lift effect */
-}
-
-/* Active Link Style (optional, requires JS) */
-.nav a.active {
-  color: #ddb347;
-  font-weight: 600;
-}
-
-/* Dropdown Menu Styles (if needed) */
-.nav li.services-dropdown {
-  position: relative;
-}
-
-.nav li.services-dropdown .mega-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
-  border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  z-index: 1000;
-  min-width: 200px;
-}
-
-.nav li.services-dropdown:hover .mega-menu {
-  display: block;
-}
-
-.mega-menu .menu-column {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.mega-menu .menu-column p {
-  margin: 0;
-  font-size: 1rem;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.mega-menu .menu-column p:hover {
-  color: #ddb347;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .header {
-    padding: 15px 20px; /* Reduced padding for smaller screens */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px; /* Increased horizontal padding */
+    background-color: transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000; /* Ensure header is above other content */
+    transition: background-color 0.3s ease; /* Smooth background transition */
   }
-
+  
+  /* Add a background color when scrolling (optional, requires JS) */
+  .header.scrolled {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Logo Container */
+  .logo-container {
+    flex: 0 0 auto;
+  }
+  
   .logo {
-    width: 100px; /* Smaller logo for mobile */
+    width: 70px; /* Slightly larger logo */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
   }
-
+  
+  .logo:hover {
+    transform: scale(1.05); /* Slightly enlarge logo on hover */
+  }
+  
+  /* Navigation Styles */
+  .nav {
+    flex: 1;
+  }
+  
   .nav ul {
-    flex-direction: column; /* Stack nav items vertically */
-    align-items: flex-end;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: -5px; /* Move up the navigation */
+  }
+  
+  .nav li {
+    margin-left: 30px; /* Increased spacing between nav items */
+    position: relative;
+  }
+  
+  .nav a {
+    text-decoration: none;
+    color: #fff; /* White text for contrast */
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    padding: 8px 12px; /* Padding for better click area */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .nav a:hover {
+    color: #ddb347; /* Gold color on hover */
+    background-color: rgba(255, 255, 255, 0.296); /* Subtle background on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  /* Active Link Style (optional, requires JS) */
+  .nav a.active {
+    color: #ddb347;
+    font-weight: 600;
+  }
+  
+  /* Dropdown Menu Styles (if needed) */
+  .nav li.services-dropdown {
+    position: relative;
+  }
+  
+  .nav li.services-dropdown .mega-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
     border-radius: 8px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    position: absolute;
-    top: 70px; /* Adjust based on header height */
-    right: 20px;
-    display: none; /* Hide by default */
+    padding: 20px;
+    z-index: 1000;
+    min-width: 200px;
   }
-
-  .nav ul.active {
-    display: flex; /* Show when toggled */
+  
+  .nav li.services-dropdown:hover .mega-menu {
+    display: block;
   }
-
-  .nav li {
-    margin-left: 0;
-    margin-bottom: 10px; /* Space between stacked items */
+  
+  .mega-menu .menu-column {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
-
-  .nav a {
-    color: #333; /* Dark text for better readability */
+  
+  .mega-menu .menu-column p {
+    margin: 0;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
   }
-
-  .nav a:hover {
-    background-color: rgba(221, 179, 71, 0.1); /* Light gold background */
+  
+  .mega-menu .menu-column p:hover {
+    color: #ddb347;
   }
-
-  /* Hide mega menu on mobile */
-  .nav li.services-dropdown .mega-menu {
-    display: none !important;
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .header {
+      padding: 15px 20px; /* Reduced padding for smaller screens */
+    }
+  
+    .logo {
+      width: 100px; /* Smaller logo for mobile */
+    }
+  
+    .nav ul {
+      flex-direction: column; /* Stack nav items vertically */
+      align-items: flex-end;
+      background-color: rgba(255, 255, 255, 0.95); /* Semi-transparent white */
+      border-radius: 8px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      position: absolute;
+      top: 70px; /* Adjust based on header height */
+      right: 20px;
+      display: none; /* Hide by default */
+    }
+  
+    .nav ul.active {
+      display: flex; /* Show when toggled */
+    }
+  
+    .nav li {
+      margin-left: 0;
+      margin-bottom: 10px; /* Space between stacked items */
+    }
+  
+    .nav a {
+      color: #333; /* Dark text for better readability */
+    }
+  
+    .nav a:hover {
+      background-color: rgba(221, 179, 71, 0.1); /* Light gold background */
+    }
+  
+    /* Hide mega menu on mobile */
+    .nav li.services-dropdown .mega-menu {
+      display: none !important;
+    }
   }
-}

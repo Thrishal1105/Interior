@@ -1,5 +1,5 @@
 /* Services.css */
-
+@import '../styles.css';
 /* General styles */
 .services-container {
   max-width: 1200px;

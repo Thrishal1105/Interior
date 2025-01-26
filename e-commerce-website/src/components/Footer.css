@@ -1,5 +1,5 @@
 /* src/components/Footer.css */
-
+@import '../styles.css';
 .footer {
   background-color: #282c34; /* Dark background for footer */
   color: #ffffff; /* White text color */

@@ -1,6 +1,7 @@
 // src/pages/Blog.js
 import React from 'react';
 import './Blog.css'; // Import the CSS for styling
+import '../styles.css';
 
 const blogs = [
   {

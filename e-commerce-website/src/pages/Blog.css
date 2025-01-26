@@ -1,5 +1,5 @@
 /* Blog.css */
-
+@import '../styles.css';
 /* General styles */
 .blog-container {
   max-width: 1200px;

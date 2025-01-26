@@ -1,5 +1,5 @@
 /* src/components/TestimonialCarousel.css */
-
+@import '../styles.css';
 /* Testimonial Section */
 .testimonial-section {
   padding: 50px 20px;
