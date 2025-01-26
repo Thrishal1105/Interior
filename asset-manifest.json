@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/css/main.aea57370.css",
+    "main.js": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/js/main.bfbd8108.js",
+    "static/media/fa-solid-900.ttf": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/fa-brands-400.ttf": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/fa-brands-400.woff2": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/fa-regular-400.woff2": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/robot-icon.png": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/robot-icon.d34edd8aabe78d6c1969.png",
+    "static/media/fa-v4compatibility.ttf": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "index.html": "/Thrishal1105/Interior/tree/main/e-commerce-website/index.html",
+    "main.aea57370.css.map": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/css/main.aea57370.css.map",
+    "main.bfbd8108.js.map": "/Thrishal1105/Interior/tree/main/e-commerce-website/static/js/main.bfbd8108.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aea57370.css",
+    "static/js/main.bfbd8108.js"
+  ]
+}
